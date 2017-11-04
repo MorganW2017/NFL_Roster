@@ -88,7 +88,7 @@ var PlayersService = function (callback) {
         if (localData) {
             playersData = JSON.parse(localData);
             console.log('player data: ', playersData)
-            return callback(service) 
+            return callback(service)
             // Have to pass service instance to callback or service will 
             // be inaccessible when loading from localStorage (not yet instantiated)
             //return will short-circuit the loadPlayersData function

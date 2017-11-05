@@ -14,11 +14,22 @@
 <body>
     <div class="container-fluid">
         <h1 class='text-center'>NFL Roster</h1>
+        <div class="row filter-row">
+            <h2 class='text-center'>Filter Players</h2>
+            <div class="col-sm-offset-1 col-sm-10">
+                <div class="filter-form">
+                    <input id="first-name" type="text" name="first-name" placeholder="First Name">
+                    <input id="last-name" type="text" name="last-name" placeholder="Last Name">
+                    <input id="team-name" type="text" name="team-name" placeholder="Team">
+                    <input id="position" type="text" name="position" placeholder="position">
+                    <button class="btn btn-main" id="filter-button" onclick="app.controllers.playersController.filterAvailablePlayers()">Filter</button>
+                </div>
+            </div>
+        </div>
         <div class="row available-players-row">
             <div class="col-sm-offset-1 col-sm-10">
                 <h2 class='text-center'>Available Players</h2>
                 <div id="available-players">
-
                 </div>
             </div>
         </div>
@@ -26,12 +37,10 @@
             <h2 class='text-center'>My Team</h2>
             <div class="col-sm-offset-1 col-sm-10">
                 <div id="user-team">
-
                 </div>
             </div>
         </div>
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="app/nfl-roster/nfl-roster-service.js"></script>
     <script src="app/nfl-roster/nfl-roster-controller.js"></script>

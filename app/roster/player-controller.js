@@ -14,18 +14,18 @@ function PlayersController() {
     function drawPlayerList(list) {
         var playerElem = document.getElementById('player-list')
         var playerTemplate = ''
-        for (var i in list) {
-            var player = list[i];
-            player.photo.path = player.photo.path;
-            playerTemplate += `
+        for (var i = 0; i < 30; i++) {
+            list;
+        }
+        var player = list[i];
+        playerTemplate += `
             <div class="card">
-            <img src="${player.photo.path}.${player.photo.extension}" width="100">
+            <img src="${player.photo}">
             <h3>${player.fullname}</h3>
             <div>
             <button class="btn-success" id="${player.id}" onclick="app.roster.player-controller.add('${player.id}')">Add to Team</button>
             </div>
             <div>
             `
-        } playerElem.innerHTML = playerTemplate
-    }
+    } playerElem.innerHTML = playerTemplate
 }

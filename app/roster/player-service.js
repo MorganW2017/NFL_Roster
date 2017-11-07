@@ -10,7 +10,7 @@ function PlayerService(callback) {
         if (localData) {
             playersData = JSON.parse(localData);
             console.log(playersData)
-            return callback(players);
+            return callback(playersData);
             //return will short-circuit the loadPlayersData function
             //this will prevent the code below from ever executing
         }
@@ -28,11 +28,3 @@ function PlayerService(callback) {
     }
     loadPlayersData(); //call the function above every time we create a new service
 }
-    // this.getPlayers = function(callWhenDone){
-    //     //Use &offset=Number to add pagination
-    //     $.get(baseUrl + 'players' + endpointUri, function(response){
-    //       players = response.data.results;
-    //       callWhenDone(players)
-    //     })
-    //   }
-

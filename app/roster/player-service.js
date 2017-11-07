@@ -2,12 +2,6 @@ function PlayerService(callback) {
     var players = [];
     var myPlayers = [];
     var playersData = [];
-    this.getPlayersByTeam = function (teamName) {
-        // ...
-    }
-    this.getPlayersByPosition = function (position) {
-        // ...
-    }
     function loadPlayersData() {
         //Lets check the localstorage for the data before making the call.
         //Ideally if a user has already used your site 
@@ -16,7 +10,7 @@ function PlayerService(callback) {
         if (localData) {
             playersData = JSON.parse(localData);
             console.log(playersData)
-            return callback(playersData);
+            return callback(players);
             //return will short-circuit the loadPlayersData function
             //this will prevent the code below from ever executing
         }

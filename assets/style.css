@@ -1,3 +1,6 @@
 h3{
     width: 100px;
 }
+.card{
+    display: flex;
+}

@@ -2,7 +2,7 @@ function PlayersController() {
     var playerService = new PlayerService(drawPlayerList);
     // var showButton = document.getElementById('show-button')
     this.add = function add(id) {
-        console.log(playerId, id)
+        player.id.push(myPlayers);
     }
     function ready(data) {
         updatePlayer(data)
@@ -24,7 +24,6 @@ function PlayersController() {
                     <p>${player.position}</p>
                     <p>${player.teamName}</p>
                     <button class="btn-success" id="${player.id}" onclick="app.roster.player-controller.add('${player.id}')">Add to Team</button>
-                    
                 </div>
             </div>
         </div>

@@ -22,6 +22,7 @@ function PlayersController() {
                 <div class="caption">
                     <h3>${player.firstName} ${player.lastName}</h3>
                     <p>${player.position}</p>
+                    <p>${player.teamName}</p>
                     <button class="btn-success" id="${player.id}" onclick="app.roster.player-controller.add('${player.id}')">Add to Team</button>
                     
                 </div>
@@ -29,20 +30,5 @@ function PlayersController() {
         </div>
         `
         } playerElem.innerHTML = playerTemplate
-
-        // function drawPlayerList(list) {
-        //     var playerElem = document.getElementById('player-list')
-        //     var playerTemplate = ''
-        //     var player = list[i];
-        //     playerTemplate += `
-        //         <div class="card">
-        //         <img src="${player.photo}">
-        //         <h3>${player.fullname}</h3>
-        //         <div>
-        //         <button class="btn-success" id="${player.id}" onclick="app.roster.player-controller.add('${player.id}')">Add to Team</button>
-        //         </div>
-        //         <div>
-        //         `
-        // } playerElem.innerHTML = playerTemplate
     }
 }
